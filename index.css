@@ -1,0 +1,58 @@
+h1 {
+	color:#5C1715;
+	text-align: left;
+	font-size: 60px;
+	margin-left: 22%;
+	margin-top: 5%;
+	margin-bottom: 1%;
+}
+
+h3 {
+	color: #5C1715;
+	text-align: right;
+	margin-right: 3%;
+	margin-left: 40%;
+	margin-bottom:1%;
+	margin-top:5%;
+	
+	
+}
+
+.line {
+
+	border-top: 1px dotted #5C1715;
+	color: #ffffff;
+	height: 1px;
+	width:100%;
+	margin-top: -1%
+	clear:none;
+}
+
+
+.table {
+	margin-left: 27%;
+	margin-top: 2%;
+}
+
+.links {
+	
+	width: 30px;
+	height: 30px;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-top:-10px;
+
+}
+
+.portrait {
+	width: 50%;
+	height: 55%;
+	margin-left: 32%;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+#about {
+	color:#5C1715;
+	font-size: 18px;
+}
