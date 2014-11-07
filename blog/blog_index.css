@@ -1,3 +1,8 @@
+body {
+	background-image: url("background2.jpg");
+	background-size: 100%;
+}
+
 h1 {
 	color:#5C1715;
 	text-align: center;
@@ -11,6 +16,12 @@ h3 {
 	font-size: 20;
 }
 
+/*
+a:link {
+	color: #330066;
+}
+-*/
+
 .line {
 
 	border-top: 1px dotted #5C1715;;
@@ -22,6 +33,8 @@ h3 {
 }
 
 .blog_links {
+	
+	font-size: 20px;
 	margin-top: 2%;
 	margin-left: 20%;
 	margin-right:20%;
@@ -29,6 +42,11 @@ h3 {
 	width: 80%;
 	table-layout: center;
 	color: #5C1715;
+}
+
+#blog_background {
+	background: #CCCCCC;
+	opacity:1;
 }
 
 .links {
@@ -43,14 +61,29 @@ h3 {
 }
 
 .social_links {
-	margin-top: 5%;
+	margin-top: 30%;
 	margin-left: 45.5%;
 	width: 2px:
 }
 
+/*
+<!-- 
 #home2 {
 	margin-left: 49.5%;
 	width:50px; 
 	height: 50;
-	
+
+
+}
+*/
+
+#navbar {
+	font-size: 20px;
+	margin-top: 1%;
+	text-align: center;
+	color: #5C1715;
+	opacity: 1;
+	background-color: #cccccc;
+	margin-left: 40%;
+	margin-right: 40%
 }
