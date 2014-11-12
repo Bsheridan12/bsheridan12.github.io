@@ -58,3 +58,9 @@ div {
 	height: 50;
 	
 }
+
+pre {
+	border: 1px dotted #5C1715;
+	background-color: #E9E9E9;
+	padding: 3%;
+}

@@ -23,27 +23,25 @@
     In Ruby there are two classes that are commonly used for storing and sorting collections of data that is similar in some way; Arrays and Hashes. 
 
 Arrays are ordered and indexed by integers with the first item in the array being index 0 and the second being index 1 and so on. There is no limit to the number of items you can have in an array. There are several ways to initialize an array, the two most common are shown below:
-<code> 
-array = [item1, item2, item3]
+<pre>array = [item1, item2, item3]
 array = Array.new [item1, item2, item3]
-</code>
+</pre>
 Once you have your array created you can access different elements by calling the array and the elements index position.
-<code>
-a = [10, 40, 3, 8, 22]
+<pre>a = [10, 40, 3, 8, 22]
 a[0] # ==> 10
 a[2] # ==> 3
 a[2..4] # ==> [3, 8, 22]
-</code>
+</pre>
 You can also call methods on your arrays with various different effects such as .size and .length, which will tell you the number of elements in your array. Using the .each method you can also iterate over every element in the array with varying effects, more on that in a different section.
 
 Hashes are very similar to arrays as they are a collection data, but they are recognized as sets key and value pairs. Every key is unique but multiple keys can have the same value. Just as with arrays, there are several ways to initialize a hash. Below are the two most common methods:
-<code>
-hash = {}
+<pre>hash = {}
 hash = Hash.new
-</code>
+</pre>
+<p></p>
+<p></p>
 There are also a lot of different synx that can be used when creating the key/value pairs within the hash. I will list a couple, the first being my preferred method.
-<code>
-h = {
+<pre>h = {
 key: "value",
 key2: 2
 }
@@ -57,12 +55,10 @@ h = {
 :key => "value",
 :key2 => 2
 } 
-
+</pre>
 I use the first method simply because there is less to write but you may chose which you prefer. It should also be noted that all key/value pairs can be written on the same line that you declare the hash but for neatness and organization I put them on separate lines. 
 Where arrays are indexed by integers, hashes are indexed by keys as displayed below:
-<code>
-
-h = {
+<pre>h = {
 cat: "Snow",
 :dog => "Pooka",
 "fish" => "Bubbles"
@@ -71,6 +67,7 @@ cat: "Snow",
 h[:cat] # ==> "Snow"
 h[:dog] # ==> "Pooka"
 h["fish"] # ==> "Bubbles"
+</pre>
 
 Just like with arrays, you can call methods on hashes like .size and .length and you can use the .each method to iterate over every key, value, or both. However hashes do have less built in methods than arrays. 
 
