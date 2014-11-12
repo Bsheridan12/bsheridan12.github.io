@@ -42,6 +42,11 @@ a:link {
 	width: 80%;
 	table-layout: center;
 	color: #5C1715;
+	border-spacing: 15%;
+}
+
+.blog_rows {
+	height: 5%;
 }
 
 #blog_background {
