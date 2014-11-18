@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Dev Bootcamp Blog
+  </title>
+  <link type="text/css" rel="stylesheet" href="blog-stylesheet.css">
+</head>
+
+<body>
+  <a href="http://bsheridan12.github.io/"><img id="home" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+  <h1 class="title">Enumerable#map</h1>
+  <p></p>
+  <h4 class="title">Iterate over Collections</h3>
+  <p></p>
+  <h4 class="title">11/17/14</h3>
+
+    <div class="line"></div>
+    <p></p>
+    <p></p>
+
+  <div>
+
+  In Ruby, everything is an object. If you want to interact with these objects or change them in some you can use methods. You can create your own methods but Ruby also has a huge bank of predefined methods that you can call on as you like. Different objects use different types of methods. Objects that are a collection of items, like an array or a hash, use a specific type of method to preform an action on each individual item within them. These methods are called enumerables. We're going to be looking at how the #map enumerable works. Well start with a simple array:
+  <pre>
+  array = [1, 2, 3, 4, 5]
+  </pre>
+  Now lets say we want to add 1 to every item in this array. We can do this using #map. First we will call the #map enumerable method on our array and then pass it a block of code that we want it to preform on our array.
+  <pre>
+  array = [1, 2, 3, 4, 5]
+
+  p array.map {|x| x+1} 
+    # => [2, 3, 4, 5, 6]
+
+  p array 
+    # => [1, 2, 3, 4, 5]
+  </pre>
+  So we can see that #map behaved exactly how we expected it to by adding 1 to each element in the array. However, on the third row when we checked the value of array again, we can see it stayed the same.
+
+  This is a nice feature of #map. It does not alter the original array but rather clones it and preforms it's block of code on the new clone.
+  If you want to change the original array though, no worries! Just slap an exclamation mark on the end of #map and you've done it.
+  <pre>
+  array = [1, 2, 3, 4, 5, 6, 7]
+
+  p array.map! {|x| x+1} 
+    # => [2, 3, 4, 5, 6]
+
+  p array 
+    # => [2, 3, 4, 5, 6]
+  </pre>
+
+  So there you go, you can now effect great change within your collections. 
+
+  </div>
+      <p></p>
+      <p></p>
+      <div class="line"></div>
+
+      <p></p>
+      <p></p>
+
+    
+      <table class="table">
+        <tr>
+          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="../LinkedIn.png"></a></td>
+
+          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="../Facebook.png"></a></td>
+
+          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="../Google.png"></a></td>
+
+          <td><a href="https://github.com/Bsheridan12"><img class="links" src="../GitHub.png"></a></td>
+
+          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="../Twitter.png"></a></td>
+        </tr>
+      </table>
+
+      <p></p>
+
+      <h3 id="navbar"><a href="../index.html">About</a> | Projects |  <a href="blog_index.html">Blog</a> | Contact</h3>
+
+      <a href="http://bsheridan12.github.io/"><img id="home2" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+
+
+</body>

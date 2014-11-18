@@ -14,8 +14,9 @@
 
 div {
 	color:#5C1715;
-	margin-left: 25%;
-	margin-right: 25%;
+	font-size: 19px;
+	margin-left: 20%;
+	margin-right: 20%;
 
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
@@ -39,7 +40,7 @@ div {
 	border-top: 1px dotted #5C1715;
 	color: #FFFFFF;
 	height: 1px;
-	width:50%;
+	width: 60%;
 }
 
 .links {
@@ -53,7 +54,7 @@ div {
 }
 
 #home2 {
-	margin-left: 49%;
+	margin-left: 48.8%;
 	width:50px; 
 	height: 50;
 	
@@ -62,5 +63,18 @@ div {
 pre {
 	border: 1px dotted #5C1715;
 	background-color: #E9E9E9;
-	padding: 3%;
+	padding:3%;
+	color:#193A7A;
+
+}
+
+#navbar {
+	font-size: 20px;
+	margin-top: 1%;
+	text-align: center;
+	color: #5C1715;
+	opacity: 1;
+	/*background-color: #cccccc;*/
+	margin-left: 40%;
+	margin-right: 40%
 }
