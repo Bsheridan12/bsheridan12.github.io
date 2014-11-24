@@ -1,5 +1,5 @@
 body {
-	background-image: url("background2.jpg");
+	background-image: url("background.jpg");
 	background-size: 100%;
 }
 
@@ -51,7 +51,7 @@ a:link {
 
 #blog_background {
 	background: #CCCCCC;
-	opacity:1;
+	opacity:.9;
 }
 
 .links {
@@ -87,7 +87,7 @@ a:link {
 	margin-top: 1%;
 	text-align: center;
 	color: #5C1715;
-	opacity: 1;
+	opacity: .9;
 	background-color: #cccccc;
 	margin-left: 40%;
 	margin-right: 40%

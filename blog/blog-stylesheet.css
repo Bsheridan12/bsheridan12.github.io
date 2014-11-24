@@ -1,3 +1,8 @@
+body {
+	background-image: url("background.jpg");
+	background-size: 100%;
+}
+
 .title {
 	color:#5C1715;
 	text-align: center;
@@ -17,6 +22,9 @@ div {
 	font-size: 19px;
 	margin-left: 20%;
 	margin-right: 20%;
+	padding-left: 5px;
+	background-color: #CCCCCC;
+	opacity: .9;
 
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
@@ -65,6 +73,8 @@ pre {
 	background-color: #E9E9E9;
 	padding:3%;
 	color:#193A7A;
+	margin-right: 5%;
+	margin-left: 5%;
 
 }
 
@@ -73,8 +83,8 @@ pre {
 	margin-top: 1%;
 	text-align: center;
 	color: #5C1715;
-	opacity: 1;
-	/*background-color: #cccccc;*/
+	opacity: .9;
+	background-color: #cccccc;
 	margin-left: 40%;
 	margin-right: 40%
 }
