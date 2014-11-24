@@ -2,6 +2,7 @@ body {
 	background-image: url("background.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .title {
@@ -26,6 +27,7 @@ div {
 	padding-left: 5px;
 	background-color: #CCCCCC;
 	opacity: .9;
+
 
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
