@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Dev Bootcamp Blog
+  </title>
+  <link type="text/css" rel="stylesheet" href="blog-stylesheet.css">
+</head>
+
+<body>
+  <a href="http://bsheridan12.github.io/"><img id="home" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+  <h1 class="title">The Classless Bad Guy</h1>
+  <p></p>
+  <h4 class="title">Ruby Classes</h3>
+  <p></p>
+  <h4 class="title">11/27/14</h3>
+
+    <div class="line"></div>
+    <p></p>
+    <p></p>
+
+  <div>
+
+    In Ruby, everything is an object and every object is an instance of a class. The object's class defines a set of built in attributes and methods that every object within that class shares. Preexisting classes, such as hashes and strings, already have a set of methods for you to use. It is worth noting that every new class can inherit attributes and methods from a parent class but for now we will be creating our own independent class. 
+
+    <h3 class="sub_headings"> Creating The Class </h3>
+    Let's say you're creating a video game and you want to have a lot of generic enemies for your hero to fight along the way. Instead of rewriting or just copy and pasting the code for your bad guys every time you want them to show up, you can create a class.
+
+    <pre> class Bad_guy
+
+    end </pre>
+
+    Alright, it's a start, but our bad guy is looking a little empty.
+
+    <h3 class="sub_headings"> Defining Attributes </h3>
+
+    We can now give our bad guys some characteristic that each new guy will share.
+    <pre> def initialize
+    @health = 100
+    @damage = 5
+    @taunt = ["Pathetic", "Not a chance!",
+    "Your mother was a goat and your father 
+    smelled of elderberries!"]
+  end </pre>
+    
+
+    <h3 class="sub_headings"> Creating Methods </h3>
+
+    Now that we have a basic template that defines our bad guys, we can give them some actions to perform.
+
+    <pre> def attack
+    puts "Bad Guy attacked you for #{@damage} damage!"
+  end
+
+  def taunt
+    puts @taunt.sample
+  end
+
+  def flee
+    puts "I've made a terrible mistake!"
+  end</pre>
+
+    <h3 class="sub_headings"> Creating New Instances </h3>
+
+    With our bad guy fully equipped with some attributes and actions we can start creating new instances and calling our methods on them!
+
+    <pre> henchman = Bad_guy.new
+
+      henchman.attack
+      "Bad GUy attacked you for 5 damage!"
+
+      henchman.tanut
+      "Your mother was a goat and your father 
+      smelled of elderberries!"
+
+      henchman.flee
+      "I've made a terrible mistake!"</pre>
+
+
+
+
+
+
+  </div>
+      <p></p>
+      <p></p>
+      <div class="line"></div>
+
+      <p></p>
+      <p></p>
+
+      <table class="table">
+        <tr>
+          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="../LinkedIn.png"></a></td>
+
+          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="../Facebook.png"></a></td>
+
+          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="../Google.png"></a></td>
+
+          <td><a href="https://github.com/Bsheridan12"><img class="links" src="../GitHub.png"></a></td>
+
+          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="../Twitter.png"></a></td>
+        </tr>
+      </table>
+
+      <p></p>
+
+      <h3 id="navbar"><a href="../index.html">About</a> | Projects |  <a href="blog_index.html">Blog</a> | Contact</h3>
+
+      <a href="http://bsheridan12.github.io/"><img id="home2" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+
+</body>

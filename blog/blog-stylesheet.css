@@ -22,11 +22,11 @@ body {
 div {
 	color:#5C1715;
 	font-size: 19px;
-	margin-left: 20%;
-	margin-right: 20%;
-	padding-left: 5px;
+	margin-left: 15%;
+	margin-right: 15%;
 	background-color: #CCCCCC;
 	opacity: .9;
+	padding: 20px;
 
 
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -51,7 +51,8 @@ div {
 	border-top: 1px dotted #5C1715;
 	color: #FFFFFF;
 	height: 1px;
-	width: 60%;
+	width: 70%;
+	padding: 0;
 }
 
 .links {
@@ -61,6 +62,7 @@ div {
 
 .table {
 	margin-left: 45.5%;
+	padding: 2%;
 
 }
 
@@ -78,8 +80,15 @@ pre {
 	color:#193A7A;
 	margin-right: 5%;
 	margin-left: 5%;
+	font-size: 17px;
 
 }
+
+.sub_headings {
+	text-align: center;
+
+}
+
 
 #navbar {
 	font-size: 20px;
