@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Dev Bootcamp Blog
+  </title>
+  <link type="text/css" rel="stylesheet" href="blog-stylesheet.css">
+</head>
+
+<body>
+  <a href="http://bsheridan12.github.io/"><img id="home" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+  <h1 class="title">Ruby Variables</h1>
+  <p></p>
+  <h4 class="title">Looking at OOP</h3>
+  <p></p>
+  <h4 class="title">12/4/14</h3>
+
+    <div class="line"></div>
+    <p></p>
+    <p></p>
+
+  <div>
+
+    Variables in Ruby, as in any other programming language, are a frequent and integral part of the language. Variables are used to assigned and reassigned values that will then be reused through out your program. This is beneficial because it cuts down you having to type out the same long string or block of code multiple times and when you have to manipulate or alter that variable, you only have to do it in one place rather than search through your code and find every instance of it's occurrence. Not all variables are the same, however. In ruby there are five different types of variables for you to use.
+    <p>
+    <h3 class="sub_headings"> 1. Local Variables </h3>
+    The most frequently used variable is the local variable. These must start with either an underscore or a lower case letter and can be initialized like so: 
+    <pre>
+    x = 0
+    greeting = "Hello World"
+    too_many_greetings = 10.times { puts greeting }
+    </pre>
+
+    As the name would suggest, local variables can only be used within the immediate segment of code in which it was defined, be it a loop, code block, a class, a method, or so on. To test this, let's start out with some dull iron and see if we can turn it into a more lustrous metal.
+    <pre>
+    base_metal = "Iron"
+
+    def alchemy!
+      noble_metal = ["Platinum", "Gold", "Silver"].sample
+      base_metal = noble_metal
+    end
+
+    alchemy!
+    puts base_metal   
+    # ==> Iron
+    </pre>
+    This looks like a promising method and a surefire way to get rich quick. Sadly though, we are only transmuting our local variable base_metal within the method and so our "Iron" remains as unimpressive as ever.</p>
+    <p>
+    <h3 class="sub_headings"> 2. Global Variables </h3>
+    Global variables always start with the dollar sign ($) and can not only be accessed from anywhere within your code but they can also be changed from anywhere as well. For this reason they are commonly discouraged as they can lead to very difficult bug tracking. At the moment, however, they may help us with our alchemy problem! Let's try initializing our variable with global scope this time and see what we get:
+    <pre>
+    $base_metal = "Iron"
+
+    def alchemy!
+      noble_metal = ["Platinum", "Gold", "Silver"].sample
+      $base_metal = noble_metal
+    end
+
+    alchemy!
+    puts $base_metal 
+    # ==> either Platinum, Gold, or Silver
+    </pre>
+    </p>
+    <p>
+    <h3 class="sub_headings"> 3. Class Variables </h3>
+    Class variables are kind of like global variables that can only be referenced within it's class and it's classes descendants. If one instance of a class variable is changed, every other instance of that variable will be changed as well. These are initialized with a double @ symbol (@@). Let's take a look: 
+    <pre>
+    class Metals
+
+      def initialize(metal)
+        @@metal = metal
+      end
+
+      def show_metal
+        @@metal
+      end
+    end
+
+    class Base_Metals < Metals
+    end
+
+    class Noble_Metals < Base_Metals
+    end
+
+    metal = Metals.new("Copper")
+    base_metal = Base_Metals.new("Iron")
+    noble_metal = Nobel_Metals.new("Gold")
+
+
+    puts noble_metal.show_metal # ==> Gold
+    puts base_metal.show_metal # ==> Gold
+    puts metal.show_metal # ==> Gold
+    </pre> 
+    Even though we created three different instances of three different classes and initialized them with different metals when we printed them out they all returned Gold. This is because ever time a new class was created our class variable, @@metal, was over written. 
+    If we wanted to avoid this result, we can use instance variables! 
+    </p>
+
+    <p>
+    <h3 class="sub_headings"> 4. Instance Variables </h3>
+    Instance variables are initialized with a single @ sign. They are to class variables as local variables are to global variables. These variables can exist within multiple objects but when a change is made to an instance variable, that change is only effects the instances of the variable within the object in which the change was made. If we look at our previous example but swap in an instance variable we will see that we now receive three different results.
+    <pre>
+    class Metals
+
+      def initialize(metal)
+        @metal = metal
+      end
+
+      def show_metal
+        @metal
+      end
+    end
+
+    class Base_Metals < Metals
+    end
+
+    class Noble_Metals < Base_Metals
+    end
+
+    metal = Metals.new("Copper")
+    base_metal = Base_Metals.new("Iron")
+    noble_metal = Nobel_Metals.new("Gold")
+
+
+    puts noble_metal.show_metal # ==> Gold
+    puts base_metal.show_metal # ==> Iron
+    puts metal.show_metal # ==> Copper
+    </pre></p>
+    <p>
+    <h3 class="sub_headings"> 5. Constant Variables </h3>
+    Constant variables are variables that, once set, though they can be changed, are not intended to be and will throw a warning when the program is run. They are defined in ALLCAPS and when defined inside of a class or module are accessible from within that same class or module and when defined outside of either, are accessible globally.  
+    <pre>
+    CONSTANT = "You better not try and change me!"
+    </pre></p>
+
+
+  </div>
+      <p></p>
+      <p></p>
+      <div class="line"></div>
+
+      <p></p>
+      <p></p>
+
+      <table class="table">
+        <tr>
+          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="../LinkedIn.png"></a></td>
+
+          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="../Facebook.png"></a></td>
+
+          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="../Google.png"></a></td>
+
+          <td><a href="https://github.com/Bsheridan12"><img class="links" src="../GitHub.png"></a></td>
+
+          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="../Twitter.png"></a></td>
+        </tr>
+      </table>
+
+      <p></p>
+
+      <h3 id="navbar"><a href="../index.html">About</a> | Projects |  <a href="blog_index.html">Blog</a> | Contact</h3>
+
+      <a href="http://bsheridan12.github.io/"><img id="home2" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+
+</body>
