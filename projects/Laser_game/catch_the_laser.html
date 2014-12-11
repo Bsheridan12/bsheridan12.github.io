@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<!-- <link type="test/css" rel="stylesheet" herf="" -->
+	<title> Catch the Laser! </title>
+</head>
+
+<body>
+	<h1>Greetings Human</h1>
+	<h3>The infernal red dot has once again infiltrated my domain. <br> You will assist me in navigating around the inferior species I allow to inhabit this area so that I may capture and eradicate this vile apparition once and for all!</h3>
+
+
+	<div id="room">
+		<div id="cat">
+		</div>
+		<div id="dog">
+		</div>
+		<div id="laser">
+		</div>
+	</div>
+
+	<style>
+		body {
+			margin: 2%;
+			padding 0;
+			background-color: #360000;
+		}
+
+		h1 {
+			text-align: center;
+			color: #cccccc;
+		}
+
+		h3 {
+			text-align: center;
+			color: #cccccc;
+		}
+
+		#room {
+			position: relative;
+			width: 1200px;
+			height: 900px;
+			background-image: url("room.png");
+			background-size: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0;
+
+		}
+
+		#laser {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-image: url("red_dot.png");
+			background-size: 100%;
+			top: 80%;
+			left: 80%;
+		}
+
+		#cat {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-image: url("snow.png");
+			background-size: 100%;
+			left: 0%;
+			top: 0%;
+		}
+
+		#dog {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-image: url("dog.png");
+			background-size: 100%;
+			top: 30%;
+			left: 30%;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+	var laserIcon = document.getElementById("laser")
+	var catIcon = document.getElementById("cat")
+	var dogIcon = document.getElementById("dog")
+
+
+	var cat = {
+		name: "Snubbles",
+		health: 2,
+		alive: true,
+		positionX: 0,
+		positionY: 0,
+	}
+
+	var dog = {
+		name: "Pookah",
+		positionX: 30,
+		positionY: 30
+	}
+
+	var laser = {
+		name: "Laser Pointer",
+		positionX: 80,
+		positionY: 80
+	}
+
+	// Move cat around screen
+
+	document.onkeydown = pressKey;
+
+	function pressKey(e) {
+		// cat moves up, dog moves down, laser moves down
+		if (e.keyCode == '38'  && (cat.health > 0) && catIcon.style.top > "0%") {
+			if (laserIcon.style.top != "90%") { 
+				laserIcon.style.top = (laser.positionY += 10) + "%";
+			}
+			if (dogIcon.style.top != "90%") {
+				dogIcon.style.top = (dog.positionY += 10) + "%"
+			}
+			else if (dogIcon.style.left != "0%") {
+				dogIcon.style.left = (dog.positionX -= 10) + "%"
+			}
+			catIcon.style.top = (cat.positionY -= 10) + "%";
+		}
+		// cat moves down, dog moves down, laser moves down then left
+		else if (e.keyCode == '40' && (cat.health > 0) && catIcon.style.top < "90%") {
+			if (laserIcon.style.top != "90%") { 
+				laserIcon.style.top = (laser.positionY += 10) + "%";
+			}
+			else if (laserIcon.style.left != "0%") {
+				laserIcon.style.left = (laser.positionX -= 10) + "%";
+			}
+			if (dogIcon.style.top != "90%") {
+				dogIcon.style.top = (dog.positionY += 10) + "%"
+			}
+			catIcon.style.top = (cat.positionY += 10) + "%";
+		}
+		// cat moves left, dog moves left, laser moves right then up
+		else if (e.keyCode == '37' && (cat.health > 0) && catIcon.style.left > "0%") {
+			if (laserIcon.style.left != "90%") { 
+				laserIcon.style.left = (laser.positionX += 10) + "%";
+			}
+			if (laserIcon.style.top != "0%") { 
+				laserIcon.style.top = (laser.positionY -= 10) + "%";
+			}
+			if (dogIcon.style.left != "0%") {
+				dogIcon.style.left = (dog.positionX -= 10) + "%"
+			}
+			else if (dogIcon.style.top != "90%") {
+				dogIcon.style.top = (dog.positionY += 10) + "%"
+			}
+			catIcon.style.left = (cat.positionX -= 10) + "%";
+		}
+		// cat moves right, dog moves up, laser moves left
+		else if (e.keyCode == '39' && (cat.health > 0) && catIcon.style.left <= "80%") {
+			if (laserIcon.style.left != "0%") { 
+				laserIcon.style.left = (laser.positionX -= 10) + "%";
+			}
+			if (dogIcon.style.top != "0%") {
+				dogIcon.style.top = (dog.positionY -= 10) + "%"
+			}
+			catIcon.style.left = (cat.positionX += 10) + "%";
+		}
+		victory();
+		damage();
+	}
+
+	// define damage and victory conditions
+
+	function victory() {
+		if (cat.positionY == laser.positionY && cat.positionX == laser.positionX) {
+			alert("You caught the laser! All the other cats envy your prowess.")
+		}
+	}
+
+	function damage() {
+		if (cat.positionY == dog.positionY && cat.positionX == dog.positionX && (cat.health > 0)) {
+			cat.health -= 1;
+			alert(dog.name + " nips at your heels! You have " + cat.health + " health left.")
+			if (cat.health == 0) {
+				alert("Oh No, " + dog.name + " has taken you hostage! Refresh the page to try again.")
+				cat.alive = false
+			}
+		}
+	}
+
+
+	</script>
+
+</body>
+
+</html>
