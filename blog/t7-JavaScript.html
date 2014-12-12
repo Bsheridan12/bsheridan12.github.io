@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Dev Bootcamp Blog
+  </title>
+  <link type="text/css" rel="stylesheet" href="blog-stylesheet.css">
+</head>
+
+<body>
+  <a href="http://bsheridan12.github.io/"><img id="home" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+  <h1 class="title">Ruby vs. JavaScript</h1>
+  <p></p>
+  <h3 class="title">Iterations</h3>
+  <p></p>
+  <h4 class="title">12/11/14</h3>
+
+    <div class="line"></div>
+    <p></p>
+    <p></p>
+
+  <div>
+
+    After several weeks of working in Ruby, we have started learning JavaScript. At first I was not at all a fan. Ruby syntax, to me, feels a lot cleaner and is much nicer to read than JavaScript. Now that I have worked with it for a little while I have warmed up to it though. We had a challenge this week that required us to make a pretty basic game and once I was able to move little icons across the screen I decided to forgive JavaScript it's faults. 
+    <p> One thing that I had some trouble with this week was iterating through an array. Here's what iteration looks like in both languages.</p>
+
+    <h3 class="sub_headings"> Ruby </h3>
+    <p> Ruby has some built in methods that make iteration very simple. </p>
+    <pre> 
+    array = [1, 2, 3, 4, 5]
+    array.each { |num| puts num + 1 }
+
+    # 2
+    # 3
+    # 4
+    # 5
+    # 6
+    </pre>
+
+    <h3 class="sub_headings"> JavaScript </h3>
+    <p>JavaScript does not have these methods so every time you need to iterate you essentially have to build your own each method using a for loop.</p>
+    <pre>
+    array = [1, 2, 3, 4, 5]
+    for (i = 0; i < array.length; i++) {
+      console.log(array[i] + 1)
+    }
+
+    // 2
+    // 3
+    // 4
+    // 5
+    // 6
+    </pre>
+    <p> A little more work here than in Ruby but still pretty easy to make sense of, syntax aside. First we declare a counter for the for loop, i. Then we tell the for loop only to run as long as our counter is less than the length of our array so that we do not create an infinite loop. Next we increment our counter by 1 so that we hit every element of the array. Finally we pass essentially the same information into the body of the for loop as did in the #each block in Ruby.
+
+
+
+
+
+
+
+
+
+
+  </div>
+      <p></p>
+      <p></p>
+      <div class="line"></div>
+
+      <p></p>
+      <p></p>
+
+      <table class="table">
+        <tr>
+          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="../LinkedIn.png"></a></td>
+
+          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="../Facebook.png"></a></td>
+
+          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="../Google.png"></a></td>
+
+          <td><a href="https://github.com/Bsheridan12"><img class="links" src="../GitHub.png"></a></td>
+
+          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="../Twitter.png"></a></td>
+        </tr>
+      </table>
+
+      <p></p>
+
+      <h3 id="navbar"><a href="../index.html">About</a> |<a href="../projects/projects.html"> Projects</a> |  <a href="../blog/blog_index.html">Blog</a> |<a href="../contact/contact.html"> Contact</h3> </a>
+
+      <a href="http://bsheridan12.github.io/"><img id="home2" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a>
+
+</body>
