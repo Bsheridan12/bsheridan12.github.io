@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link type="text/css" rel="stylesheet" href="index.css">
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
 	<title>
 		Brian.J.Sheridan - Web Dev
 	</title>
@@ -14,20 +14,8 @@
 
 		<div class="line"></div>
 
-		<table class="table">
-        <tr>
-          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="LinkedIn.png"></a></td>
+    <?php require($DOCUMENT_ROOT . "./templates/social_media.html"); ?>
 
-          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="Facebook.png"></a></td>
-
-          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="Google.png"></a></td>
-
-          <td><a href="https://github.com/Bsheridan12"><img class="links" src="GitHub.png"></a></td>
-
-          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="Twitter.png"></a></td>
-
-        </tr>
-      </table>
 
       <table>
       	<tr>
