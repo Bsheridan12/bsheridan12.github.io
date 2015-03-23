@@ -4,16 +4,11 @@ body {
 	overflow: hidden;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-	color:#5C1715;
-	text-align: left;
-	font-size: 65px;
-/*	margin-left: 22%;
-	margin-top: 5%;
-	margin-bottom: 1%;*/
 }
 
 h3 {
@@ -26,17 +21,16 @@ h3 {
 }
 
 .name-div {
-	background-color: #5F5F5F;
-	width: 400px;
-	height: 400px;
+	background-color: #5C1715;
+	width: 350px;
+	height: 350px;
 	margin: auto;
-	padding: 15px;
+	padding: 20px;
 	padding-left: 25px;
 }
 
-.name-div h1, h3 {
-	margin-left: 3%;
-	margin-right: 3%;
+.name-div h1 {
+	font-size: 38px;
 	margin: auto;
 	font-weight: 100;
 	color: white;
@@ -46,9 +40,20 @@ h3 {
 }
 
 .name {
-	margin-top: 5%;
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
+}
+
+.profile-div {
+	margin-bottom: 0;
+	margin: auto;
+	width: 250px;
+	height: 250px;
+}
+
+.profile {
+	height: 250px;
+	width: 250px;
 }
 
 .nav-bar {

@@ -12,9 +12,9 @@
     <?php require($DOCUMENT_ROOT . "./templates/nav_bar.html"); ?>
 
     <div class="name-div">
-      <div class="name"><h1>B R I – <br> A N</h1></div>
-      <br><br>
-      <div class="name"><h1>S H E R – <br> I D A N</h1></div>
+      <div class="profile-div"><img class="profile" src="./images/profile.png"></div>
+      <div class="name"><h1>B R I A N</h1></div>
+      <div class="name"><h1>S H E R I D A N</h1></div>
     </div>
 
       <div class="footer">
