@@ -1,17 +1,19 @@
 body {
 	background-image: url("../images/background.jpg");
 	background-size: 100%;
+	overflow: hidden;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
 	color:#5C1715;
 	text-align: left;
-	font-size: 60px;
-	margin-left: 22%;
+	font-size: 65px;
+/*	margin-left: 22%;
 	margin-top: 5%;
-	margin-bottom: 1%;
+	margin-bottom: 1%;*/
 }
 
 h3 {
@@ -23,11 +25,51 @@ h3 {
 	margin-top:5%;
 }
 
-/*
-a:link {
-	color: #330066;
+.name-div {
+	background-color: #5F5F5F;
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	padding: 15px;
+	padding-left: 25px;
 }
--*/
+
+.name-div h1, h3 {
+	margin-left: 3%;
+	margin-right: 3%;
+	margin: auto;
+	font-weight: 100;
+	color: white;
+  background: url("../images/background.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name {
+	margin-top: 5%;
+	margin: auto;
+	text-align: center;
+}
+
+.nav-bar {
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+	list-style-type: none;
+	font-size: 22px;
+	margin-bottom: 150px;
+
+}
+
+.nav-bar li {
+	display: inline;
+	padding: 0 2.5% 0 0;
+	cursor: pointer;
+}
+.nav-bar li a {
+	text-decoration: none;	
+	color: #5C1715;
+}
 
 .line {
 
@@ -35,24 +77,31 @@ a:link {
 	color: #ffffff;
 	height: 1px;
 	width:100%;
-	margin-top: -1%
+	margin-top: -1%;
 	clear:none;
 }
 
 
-.table {
-	margin-left: 27%;
-	margin-top: 2%;
+.social-table {
+	margin: 0 auto;
 }
 
-.links {
-	
-	width: 30px;
-	height: 30px;
+.social-links {
+	width: 35px;
+	height: 35px;
 	margin-right: 2px;
 	margin-left: 2px;
 	margin-top:-10px;
+	padding: 8%;
 
+}
+
+.footer {
+	position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:25px;
 }
 
 .portrait {
@@ -67,3 +116,26 @@ a:link {
 	color:#5C1715;
 	font-size: 22px;
 }
+
+.blog_links {
+	
+	font-size: 20px;
+	margin-top: 2%;
+	margin-left: 20%;
+	margin-right:20%;
+	margin-bottom: 2%;
+	width: 80%;
+	table-layout: center;
+	color: #5C1715;
+	border-spacing: 15%;
+}
+
+.blog_rows {
+	height: 5%;
+}
+
+#blog_background {
+	background: #CCCCCC;
+	opacity:.9;
+}
+

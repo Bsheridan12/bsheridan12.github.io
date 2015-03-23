@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link type="text/css" rel="stylesheet" href="blog_index.css">
+	<link type="text/css" rel="stylesheet" href="../css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<title> Dev Bootcamp Blog</title>
 </head>
 
 <body>
+	<?php require($DOCUMENT_ROOT . "../templates/nav_bar.html"); ?>
+
 	<h1>Dev Bootcamp Chronicle</h1>
 	<h3>From Plebeian to Programmer</h3>
 
@@ -59,27 +62,10 @@
 	</table>
 </div>
 
-	<div class="line"></div>
+  <div class="footer">
+    <?php require($DOCUMENT_ROOT . "../templates/social_media.html"); ?>
+  </div>
 
-	<table class="social_links">
-        <tr>
-          <td><a href="https://www.linkedin.com/pub/brian-sheridan/74/922/a15"><img class="links" src="../LinkedIn.png"></a></td>
-
-          <td><a href="https://www.facebook.com/brian.sheridan.52"><img class="links" src="../Facebook.png"></a></td>
-
-          <td><a href="https://plus.google.com/u/0/+BrianSheridan12/posts"><img class="links"src="../Google.png"></a></td>
-
-          <td><a href="https://github.com/Bsheridan12"><img class="links" src="../GitHub.png"></a></td>
-
-          <td><a href="https://twitter.com/bsheridan12"><img class="links" src="../Twitter.png"></a></td>
-        </tr>
-      </table>
-
-
-
-      <h3 id="navbar"><a href="../index.html">About</a> |<a href="../projects/projects.html"> Projects</a> |  <a href="../blog/blog_index.html">Blog</a> |<a href="../contact/contact.html"> Contact</h3> </a>
-
-    <!-- <a href="http://bsheridan12.github.io/"><img id="home2" src="http://bhairavelectronicspvtltd.com/images/Home%20Button.png"></a> -->
 
   </body>
-  </html>
+</html>
